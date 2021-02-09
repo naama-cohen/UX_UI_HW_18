@@ -2,22 +2,36 @@
     display: inline-block;
     vertical-align: top;
 }
+
+nav ul {
+justify-content: space-between;
+margin-left: auto;
+margin-right: auto;
+}
+
+.header {
+    width: 100%;
+
+}
+
 .logo {
-    width: 10%;
+    height: 100%;
     padding: 1%;
     text-align: center;
 }
 .nav {
-    width: 73%;
+    height: 10%;
     padding: 1%;
+    width: 100%;
 }
+
 ul {
     margin-left: auto;
+    margin-right: auto;
 }
 footer ul {
     display: flex;
     justify-content: space-around;
-
 }
 
 .heroImg {
@@ -34,5 +48,54 @@ padding: 25px;
 }
 .footer {
     background-color: #373738;
-    color: #333333;
+    color: #ffffff;
+}
+
+.flexcontainer {
+    display: flex;
+    width: 33%;
+    margin-right: auto;
+    margin-left: auto;
+    padding: 10%;
+    justify-content: space-evenly;
+    text-align: center;
+}
+
+.workgrid {
+    display: grid; 
+    grid-template-rows:  50%;
+    grid-template-columns: auto;
+    grid-template-areas: item1 item2;
+}
+
+.item1 {
+    grid-area: 55 / 8;
+}
+
+.item2 {
+    grid-area: 62 / 8;
+}
+
+.project_img {
+    height: auto;
+}
+
+@media only screen and (max-width: 600){
+    .flexcontainer {
+        display: flex;
+        width: 100%;
+        margin-right: auto;
+        margin-left: auto;
+        padding: 10%;
+        justify-content: space-evenly;
+        text-align: center;
+    }
+    .workgrid {
+        margin; 0px 5%;
+        display: grid; 
+        grid-template-rows:  300px 300px 300px 300px 300px;
+        grid-template-columns: 1fr;
+        grid-template-areas: item1 item2;
+
+    }
 }
