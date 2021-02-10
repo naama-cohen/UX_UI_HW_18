@@ -68,8 +68,8 @@ padding: 25px;
 
 .workgrid {
     display: grid; 
-    grid-template-columns: auto auto;
-    grid-gap: 1rem;
+    grid-template-columns: 1fr 1fr;
+    grid-gap: 0.2rem;
 }
 
 .habitat {
@@ -84,10 +84,17 @@ padding: 25px;
     width: 100%;
 }
 
-@media only screen and (max-width: 600) {
-    flex-direction: columns: ;;
+@media only screen and (max-width: 600px) {
+    .flexcontainer {
+        flex-direction: column;
+    } 
+
+    .workgrid {grid-template-columns: 1fr;
+        grid-template-rows: 0.5fr 0.5fr;
+        grid-template-areas:
+        "habitat"
+        "nws";
+
+    }
 }
 
-@media screen and (max-width; 600) {
-    .workgrid {grid-template-columns: repeat(2, 1fr);}
-}
